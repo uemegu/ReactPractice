@@ -1,0 +1,85 @@
+@import "../../Styles/Theme.scss";
+@import "../../Styles/Component.scss";
+
+.button {
+  background: transparent;
+  background-color: $color-text;
+  color: $color-light;
+  border-radius: $el-rad/2;
+  font-weight: $weight-semi;
+  height: 3rem;
+  box-shadow: none;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  outline: none;
+  line-height: 1;
+  cursor: pointer;
+  padding-left: $el-pad;
+  padding-right: $el-pad;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    svg {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    &:hover {
+      animation: none;
+    }
+  }
+
+  // #region WIDTH
+  &--full {
+    width: 100%;
+  }
+  // #endregion
+
+  //#region DEFAULT COLOR
+  &--primary {
+    background: $color-primary;
+    color: $color-light;
+
+    &:active {
+      background: darken($color-primary, 10%);
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    color: $color-light;
+
+    &:active {
+      background: darken($color-secondary, 10%);
+    }
+  }
+
+  &--default {
+    background: $color-grey-light;
+    color: $color-light;
+  }
+
+  &:hover {
+    animation: zoom-animation 0.5s ease-in-out 1;
+  }
+}

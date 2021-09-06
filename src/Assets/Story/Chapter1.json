@@ -1,0 +1,176 @@
+{
+  "scenes": [
+    {
+      "back": "Background",
+      "talk": [
+        {
+          "char1": "Woman2-0",
+          "position1": "center",
+          "char1Size": "100%",
+          "text": "え、どうしたのこんなところに呼び出して・・・"
+        },
+        {
+          "char1": "Woman2-0",
+          "position1": "center",
+          "char1Size": "100%",
+          "items": [{ "text": "告白する", "flg": 1 }]
+        },
+        {
+          "char1": "Woman2-2",
+          "position1": "center",
+          "char1Size": "100%",
+          "text": "またまた・・・冗談でしょ？"
+        },
+        {
+          "char1": "Woman2-2",
+          "position1": "center",
+          "char1Size": "100%",
+          "items": [
+            { "text": "ばれた？", "flg": 2 },
+            { "text": "本気", "flg": 3 }
+          ]
+        },
+        {
+          "char1": "Woman2-0",
+          "position1": "center",
+          "char1Size": "100%",
+          "text": "もーやだぁーびっくりしたじゃない",
+          "condition": [2],
+          "goto": { "page": "End", "param": "誤魔化しエンド" }
+        },
+        {
+          "char1": "Woman2-4",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [3],
+          "text": "え、だって私たちさっき会ったばっかだよね？"
+        },
+        {
+          "char1": "Woman2-4",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [3],
+          "items": [
+            { "text": "だって可愛いから", "flg": 4 },
+            { "text": "違う！", "flg": 5 }
+          ]
+        },
+        {
+          "char1": "Woman2-4",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [4],
+          "text": "え・・・本当にそう思う？"
+        },
+        {
+          "char1": "Woman2-4",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [4],
+          "items": [
+            { "text": "そう思う", "flg": 6 },
+            { "text": "冗談だよ", "flg": 7 }
+          ]
+        },
+        {
+          "char1": "Woman2-3",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [6],
+          "bgm": "honor",
+          "text": "・・・あなたは私を捨てたりしないよね？"
+        },
+        {
+          "char1": "Woman2-3",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [6],
+          "bgm": "honor",
+          "text": "あなたはいつでも私のそばにいるよね？ご飯のときもお風呂のときもトイレの時もお出かけする時も仕事をする時も・・・",
+          "goto": { "page": "End", "param": "ヤンデレエンド" }
+        },
+        {
+          "char1": "Woman2-2",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [7],
+          "text": "からかってるの？",
+          "goto": { "page": "End", "param": "あきられエンド" }
+        },
+        {
+          "char1": "Woman2-4",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [5],
+          "text": "え・・・どういうこと？どこかで会ってた？"
+        },
+        {
+          "char1": "Woman2-4",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [5],
+          "items": [
+            { "text": "前世で", "flg": 8 },
+            { "text": "脳内で", "flg": 9 },
+            { "text": "・・・", "flg": 10 }
+          ]
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [8],
+          "bgm": "sad",
+          "text": "・・・覚えてたの？"
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [8],
+          "text": "燃え盛るお城の中、愛を誓ったのを私はまだ忘れていなかったわ。現世であなたを見かけた時、あぁ・・・なんという運命の巡り合わせ。何度声をかけようと思ったことか・・・",
+          "goto": { "page": "End", "param": "生まれ変わっても一緒エンド" }
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [9],
+          "bgm": "sad",
+          "text": "・・・あなたもそうなの？"
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [9],
+          "text": "ずっとあなたのことを考えていたわ。もう何十年も過ごしたかのよう・・・そうそう、息子のさとしがなかなか帰ってこなくて警察に行こうかと騒いだこともあったね。",
+          "goto": { "page": "End", "param": "脳内ハッピーエンド" }
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [10],
+          "bgm": "sad",
+          "text": "・・・あ、もしかして！"
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [10],
+          "items": [{ "text": "思い出した？", "flg": 11 }]
+        },
+        {
+          "char1": "Woman2-1",
+          "position1": "center",
+          "char1Size": "100%",
+          "condition": [10],
+          "text": "覚えてる、小さい頃あなたに助けられた・・・。ある雨の日、足を滑らした私は川に溺れて・・・もうダメだと思ってたところ、あなたの力強い腕に引っ張られたのを覚えてるわ。",
+          "goto": { "page": "End", "param": "作られし過去エンド" }
+        }
+      ]
+    }
+  ]
+}

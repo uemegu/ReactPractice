@@ -1,0 +1,18 @@
+@import "../../Styles/Theme.scss";
+@import "../../Styles/Component.scss";
+
+.ScreenSwitch {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-light;
+  animation: slide-in-out 1.5s ease-in-out 1;
+  z-index: $popup-z-index + 1;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+  }
+}

@@ -1,0 +1,55 @@
+$breakpoints: (
+  "sm": (
+    max-width: 767px,
+  ),
+  "tab": (
+    min-width: 768px,
+  ),
+  "pc": (
+    min-width: 1200px,
+  ),
+) !default;
+
+$weight-normal: 400;
+$weight-semi: 500;
+$weight-bold: 700;
+$font-body: "Noto Sans JP", sans-serif;
+
+$color-primary: #e53935;
+$color-primary-light: #fff4f3;
+$color-secondary: #ff6e2c;
+$color-light: #ffffff;
+$color-dark: #111013;
+$color-grey: #211f22;
+$color-grey-dark: #2c2c31;
+$color-grey-light: #dfc7de;
+$color-text: #ff7bac;
+$color-description: #4e342e;
+$color-danger: #cc0000;
+
+// TODO 以下整理必要
+
+//#region ------ BOX MODEL
+$el-pad: 1.5rem;
+$el-mar: 1.5rem;
+$el-height: 5rem;
+$header-height: 6rem;
+//#endregion
+
+//#region ------ BORDER
+$el-rad: 1.5rem;
+$button-rad: 0.5rem;
+//#endregion
+
+$popup-z-index: 100;
+
+//https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+  }
+}

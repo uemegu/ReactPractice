@@ -1,0 +1,29 @@
+@import "../../Styles/Theme.scss";
+
+.Top {
+  &__frame {
+    position: absolute;
+    top: 80%;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    opacity: 0.5;
+    background-color: #0d47a1;
+    border-radius: 10px;
+  }
+  &__text {
+    position: absolute;
+    top: 80%;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    overflow: auto;
+    font-size: 32px;
+    @include responsive(sm) {
+      font-size: 18px;
+    }
+  }
+}

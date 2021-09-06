@@ -1,0 +1,30 @@
+@import "../../Styles/Theme.scss";
+
+.Charactor {
+  height: 100%;
+  & img {
+    position: absolute;
+    bottom: 0;
+    &.left {
+      left: 20%;
+      @include responsive(sm) {
+        left: 0%;
+      }
+    }
+    &.right {
+      right: 20%;
+      @include responsive(sm) {
+        right: 0%;
+      }
+    }
+    &.center {
+      right: 55%;
+      left: 45%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      @include responsive(sm) {
+        right: 0%;
+      }
+    }
+  }
+}

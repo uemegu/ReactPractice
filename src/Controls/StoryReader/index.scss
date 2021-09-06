@@ -1,0 +1,15 @@
+.StoryReader {
+  &__overlay {
+    background-color: #888;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+  }
+  &__items_container {
+    position: absolute;
+    z-index: 3;
+  }
+  &__items {
+    width: 16rem;
+  }
+}
