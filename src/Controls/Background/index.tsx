@@ -15,7 +15,6 @@ const Background = (props: OwnProps): ReactElement => {
   let name = "";
   switch (props.name) {
     case "Background":
-      // 適当にググって落としてきた：https://min-chi.material.jp/fm/bg_c/convenience_store/
       name = back;
       break;
   }
