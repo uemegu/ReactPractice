@@ -17,6 +17,7 @@ const story: Scenes = require("../../Assets/Story/Chapter1.json");
 
 interface StoryContextProps {
   start: () => void;
+  reStart: () => void;
   getCurrentTalk: () => Talk;
   nextStory: () => boolean;
 }
@@ -25,6 +26,7 @@ export const StoryContext = createContext({} as StoryContextProps);
 interface ProgramCounter {
   scene: number;
   talk: number;
+  isFinish: boolean;
 }
 
 type Props = {
@@ -56,6 +58,13 @@ const Story = (props: Props): ReactElement => {
       goto(PATH.TOP, "Background");
       play("default");
       setIsStarted(true);
+    },
+    reStart: (): void => {
+      progress.scene = 0;
+      progress.talk = 0;
+      setTalk(getTalk());
+      goto(PATH.TOP, "Background");
+      play("default");
     },
     getCurrentTalk: (): Talk => {
       if (!isStarted) {

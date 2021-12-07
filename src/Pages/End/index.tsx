@@ -1,7 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import "./index.scss";
 import "../../Styles/Styles.scss";
 import { useParams } from "react-router-dom";
+import Button from "../../Controls/Button";
+import { StoryContext } from "../../Controls/StoryReader";
 
 interface PathType {
   type: string;
@@ -9,6 +11,7 @@ interface PathType {
 
 const Top: React.VFC = () => {
   let param = useParams<PathType>();
+  const { reStart } = useRef(useContext(StoryContext)).current;
   return (
     <>
       <div className="End flex items-center justify-center flex-col h-full">
@@ -26,6 +29,16 @@ const Top: React.VFC = () => {
           >
             https://github.com/uemegu/ReactPractice
           </a>
+        </div>
+        <div className="mt-8">
+          <Button
+            className="Login__button"
+            label="やり直す（人生を）"
+            onClick={(e) => {
+              e.stopPropagation();
+              reStart();
+            }}
+          ></Button>
         </div>
       </div>
     </>

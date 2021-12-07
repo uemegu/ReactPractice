@@ -5,6 +5,7 @@ import Woman1 from "../../Assets/Image/Woman1.png";
 import { useHistory } from "react-router-dom";
 import { PATH } from "../../Const/Pages";
 import Background, { BackgroundTypes } from "../Background";
+import { stringify } from "querystring";
 
 interface ScreenSwitchContextProps {
   goto: (path: PATH, background?: BackgroundTypes, param?: string) => void;
