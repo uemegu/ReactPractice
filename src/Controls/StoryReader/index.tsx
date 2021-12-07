@@ -62,6 +62,7 @@ const Story = (props: Props): ReactElement => {
     reStart: (): void => {
       progress.scene = 0;
       progress.talk = 0;
+      flags.splice(0);
       setTalk(getTalk());
       goto(PATH.TOP, "Background");
       play("default");
